@@ -1,0 +1,54 @@
+<a ng-href="http://localhost:3000/#/">Home</a>
+
+<h1>Help solve a problem!</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Problem</th>
+    <th>!!!</th>
+  </tr>
+  <tr>
+    <td>Productivity</td>
+    <td>I have too many tabs open.</td>
+    <td>53</td>
+    <td><button>Solve this!</button></td>
+  </tr>
+  <tr>
+    <td>Food</td>
+    <td>I don't know what to eat for dinner.</td>
+    <td>83</td>
+    <td><button>Solve this!</button></td>
+  </tr>
+  <tr>
+    <td>Housing</td>
+    <td>I can't find short-term housing in LA.</td>
+    <td>153</td>
+    <td><button>Solve this!</button></td>
+  </tr>
+  <tr>
+    <td>{{category}}</td>
+    <td>{{problem}}</td>
+    <td>153</td>
+    <td><button>Solve this!</button></td>
+  </tr>
+</table>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>category</th>
+            <th>problem</th>
+            <th>!!!</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="probObj in problems">
+            <td id="category">{{probObj.category}}</td>
+            <td id="problem">{{probObj.problem}}</td>
+            <td id="upvotes">88</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

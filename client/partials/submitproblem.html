@@ -1,13 +1,14 @@
-<a ng-href="http://localhost:3000/">home</a>
+<a ng-href="http://localhost:3000/#/">Home</a>
+
 <h1>Solve my problem!</h1>
 
-<form ng-submit = "save(category, problem)">
+<form ng-submit = "poster()">
   <input type="text" ng-model = category></input>
-  {{category}}
+  Category
   <br>
   <br>
   <input type="text" ng-model = problem></input>
-  {{problem}}
+  Describe Problem Here
   <br>
   <br>
   <button type="submit" >Submit Problem</button>

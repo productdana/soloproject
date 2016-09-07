@@ -4,11 +4,9 @@ var app = angular
   .module('myApp', [
     'ngRoute',
     'Codesmith.HomeController',
-    'Codesmith.SubmitProblemController'
-    // 'Codesmith.ProblemFactory'
-    // 'Problems-Model'
-    // 'Codesmith.JobService',
-    // 'Codesmith.JobController'
+    'Codesmith.SubmitProblemController',
+    'Codesmith.ProblemFactory',
+    'Codesmith.ShowProblemsController'
   ]);
 
 
@@ -25,10 +23,10 @@ function configFunction($routeProvider, $locationProvider) {
     .when('/submitproblem', {
       templateUrl: './partials/submitproblem.html',
       controller: 'SubmitProblemController'
+    })
+    .when('/showproblems', {
+      templateUrl: './partials/showproblems.html',
+      controller: 'ShowProblemsController'
     });
-    // .when('/jobs', {
-    //   templateUrl: './partials/job.html',
-    //   controller: 'JobController'
-    // })
 
 }
