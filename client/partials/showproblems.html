@@ -15,8 +15,8 @@
     <td><button>Solve this!</button></td>
   </tr>
   <tr>
-    <td>Food</td>
-    <td>I don't know what to eat for dinner.</td>
+    <td>Random</td>
+    <td>My dog hogs my pillow.</td>
     <td>83</td>
     <td><button>Solve this!</button></td>
   </tr>
@@ -32,9 +32,15 @@
     <td>153</td>
     <td><button>Solve this!</button></td>
   </tr>
+	<tr ng-repeat="probObj in problems">
+	    <td id="category">{{probObj.category}}</td>
+	    <td id="problem">{{probObj.problem}}</td>
+	    <td id="upvotes">88</td>
+	    <td><button>Solve this!</button></td>
+	</tr>
 </table>
 
-<div>
+<!-- <div>
     <table>
         <thead>
         <tr>
@@ -48,7 +54,8 @@
             <td id="category">{{probObj.category}}</td>
             <td id="problem">{{probObj.problem}}</td>
             <td id="upvotes">88</td>
+            <td><button>Solve this!</button></td>
         </tr>
         </tbody>
     </table>
-</div>
+</div> -->

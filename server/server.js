@@ -24,8 +24,13 @@ const Problem = mongoose.model('Problem', problemSchema);
 
 //need to post to database (or post to server -> db)
 app.get('/list', function (req, res) {
-	console.log('get RESBODY: ', res.body);
-
+	console.log('get RESBODY: ', res.data);
+	Problem.find(function(err, data){
+		if (err) {
+          console.log(err);
+      	};
+	      console.log("inside find", res.json(data));
+	});
   // res.send('Got a POST request');
 });
 

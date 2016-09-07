@@ -26,7 +26,7 @@ function configFunction($routeProvider, $locationProvider) {
     })
     .when('/showproblems', {
       templateUrl: './partials/showproblems.html',
-      controller: 'ShowProblemsController'
+      controller: 'SubmitProblemController'
     });
 
 }
