@@ -1,2 +1,2 @@
 # soloproject
-Meeting place for consumers &amp; developers/business to solve user problems.
+Meeting place for consumers and developers/business to solve user problems.

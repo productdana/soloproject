@@ -1,0 +1,29 @@
+{
+  "name": "resolve",
+  "version": "1.0.0",
+  "description": "resolve is a meeting place for consumers to share their problems and developers and businesses to use those ideas to make better products.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/productdana/soloproject.git"
+  },
+  "author": "dana tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/productdana/soloproject/issues"
+  },
+  "homepage": "https://github.com/productdana/soloproject#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "mongodb": "^2.2.9",
+    "mongoose": "^4.6.0",
+    "nodemon": "^1.10.2",
+    "path": "^0.12.7"
+  }
+}
