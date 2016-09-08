@@ -12,6 +12,9 @@ angular
 function SubmitProblemController($scope, ProblemFactory) {
 	$scope.category = ProblemFactory.category;
 	$scope.problem = ProblemFactory.problem;
+	// $scope.num = Pr;
+	$scope.list = [];
+	$scope.num = 1;
 	var fetcher = function() {ProblemFactory.fetch().then(function(result) {
 	    $scope.problems = result.data;
 	    console.log("SCOPE.problems in fetcher", $scope.problems);
@@ -23,12 +26,24 @@ function SubmitProblemController($scope, ProblemFactory) {
 		var probObj = {};
 		probObj.category = $scope.category;
 		probObj.problem = $scope.problem;
+		probObj.num = 1;
 		ProblemFactory.poster(probObj).then(function(result){
-		
+
 			fetcher();
 		});
 	};
 	fetcher();
+	// $scope.upvote = function() {
+	// 	$scope.num++;
+	// 	// $scope.list.push(this.num);
+	// };
+
+	$scope.upvote = function(id){
+		
+	    return $http.get('/api/problems/' + id + '/upvote');
+	}
+	
+	
 };
 
 

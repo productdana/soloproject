@@ -1,4 +1,12 @@
+body {
+	background-color: Skyblue;	
+}
 .container {
   text-align: center;
   margin: 0 auto;
+  
+}
+.list {
+	text-align: center;
+	margin: 0 auto;
 }

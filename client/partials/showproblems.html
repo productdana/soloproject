@@ -2,7 +2,7 @@
 
 <h1>Help solve a problem!</h1>
 
-<table>
+<table class = "list">
   <tr>
     <th>Category</th>
     <th>Problem</th>
@@ -33,10 +33,14 @@
     <td><button>Solve this!</button></td>
   </tr>
 	<tr ng-repeat="probObj in problems">
-	    <td id="category">{{probObj.category}}</td>
-	    <td id="problem">{{probObj.problem}}</td>
-	    <td id="upvotes">88</td>
-	    <td><button>Solve this!</button></td>
+		<form ng-submit = "upvote()">
+		    <td id="category">{{probObj.category}}</td>
+		    <td id="problem">{{probObj.problem}}</td>
+		    <td id="upvotes">{{counter}}</td>
+		    <td><button type="submit" ng-init="counter = 1" ng-click="counter = counter + 1" data-ng-click="upvote(problem._id)">Solve this!</button></td>
+		    		    <!-- <td><button type="submit" ng-init="counter = 1" ng-click="counter = counter + 1" data-ng-click="Problem.upvote(problem._id)">Solve this!</button></td> -->
+
+	    </form>
 	</tr>
 </table>
 

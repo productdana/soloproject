@@ -21,6 +21,7 @@ function ProblemFactory($http) {
   var factory = {};
   factory.category = "Programming";
   factory.problem = "Fixing this site";
+  factory.num = 1;
 
   factory.fetch = function() {
     return $http.get('/list');
@@ -35,9 +36,10 @@ function ProblemFactory($http) {
 
   
 
- factory.save = function(category, problem) {
+ factory.save = function(category, problem, num) {
    factory.category = category;
    factory.problem = problem;
+   factory.num = num;
    // var probtosave = new Problem({
    //  category: "testcategory",
    //  problem: "testproblem"

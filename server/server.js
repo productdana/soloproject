@@ -18,7 +18,8 @@ app.use(express.static(path.join(__dirname, './../client/')));
 
 const problemSchema = new Schema({
     category: String,
-    problem: String
+    problem: String,
+    num: {type: Number, default: 1}
   });
 const Problem = mongoose.model('Problem', problemSchema);
 
@@ -38,7 +39,8 @@ app.post('/list', function (req, res) {
 	console.log('POST REqBODY: ', req.body);
 	var addpost = new Problem({
 		category: req.body.category,
-		problem: req.body.problem
+		problem: req.body.problem,
+		num: req.body.num
 	});
 	addpost.save( (err) => {
         if (err) {
@@ -52,7 +54,11 @@ app.post('/list', function (req, res) {
   res.send('Got a POST request');
 });
 
-
+app.get('/api/problems/:problem_id/upvote', function(req, res){
+	Problem.findOneAndUpdate({_id: req.params.problem_id}, { $inc: {num: 1} } ), function(err,doc){
+    console.log('upvoted');
+    };
+});
 
 server.listen(3000, () => {
   console.log('listening at http://localhost:3000');
